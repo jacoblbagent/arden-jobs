@@ -1,5 +1,6 @@
 node_modules/
 .DS_Store
+build.log
 
 # Older output directory, replaced by docs/ (the published artifact). Kept
 # ignored so the Astryx renderer never writes into a stale copy.
