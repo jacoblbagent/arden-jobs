@@ -108,7 +108,7 @@
 
   // Sit directly above the table: the table lives inside a scroll wrapper whose
   // parent is the page's vertical stack, so the injected row picks up the same
-  // stack gap as the level filter above it.
+  // stack gap as the heading above it.
   var tableBlock = table.closest('[role="group"]') || table;
   tableBlock.parentNode.insertBefore(wrapper, tableBlock);
 

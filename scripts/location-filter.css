@@ -1,17 +1,13 @@
 /* The injected location filter: one label, one select, one live count. The row
-   mirrors the Astryx filter row above it (14px/500 text, 28px tall, 10px
-   radius, translucent fill) so the two read as one control group, and every
-   colour comes from the theme's custom properties so it follows light and dark
-   mode without a second palette. */
+   follows the page's own control styling (14px/500 text, 28px tall, 10px
+   radius, translucent fill), and every colour comes from the theme's custom
+   properties so it follows light and dark mode without a second palette. */
 
 .loc-filter {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  /* The stack above applies a 16px gap to every child; the two filter rows
-     belong together, so pull this row up to half that. */
-  margin-top: -8px;
 }
 
 .loc-filter-label,

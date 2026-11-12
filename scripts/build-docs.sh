@@ -10,11 +10,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 mkdir -p docs
-for page in page:index entry-level:entry-level; do
-  src="src/${page%%:*}.tsx"
-  out="docs/${page##*:}.html"
-  npx @astryxdesign/cli experimental render "$src" --out "$out"
-done
+npx @astryxdesign/cli experimental render src/page.tsx --out docs/index.html
 
 touch docs/.nojekyll
 

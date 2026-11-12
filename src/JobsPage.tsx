@@ -2,46 +2,14 @@ import {Theme} from '@astryxdesign/core/theme';
 import {Heading} from '@astryxdesign/core/Heading';
 import {Text} from '@astryxdesign/core/Text';
 import {Link} from '@astryxdesign/core/Link';
-import {Button} from '@astryxdesign/core/Button';
 import {Table, proportional, pixel} from '@astryxdesign/core/Table';
 import {VStack} from '@astryxdesign/core/VStack';
-import {HStack} from '@astryxdesign/core/HStack';
 import {themes, defaultThemeSlug} from '../astryx-themes';
-import {jobs as allJobs, type Job} from './jobsData';
+import {jobs, type Job} from './jobsData';
 
-// Two static views stand in for a filter: this file renders no script, so
-// "entry level only" is a separate page rather than a checkbox. Counts and
-// links live in one place so the numbers can never drift from the pages.
-const entryJobs = allJobs.filter((job) => job.level === 'Entry level');
-
-const views = [
-  {slug: 'index.html', label: 'All roles', count: allJobs.length},
-  {slug: 'entry-level.html', label: 'Entry level', count: entryJobs.length},
-];
-
-function FilterBar({current}: {current: string}) {
-  return (
-    <HStack gap={2} vAlign="center">
-      <Text type="label" color="secondary">
-        Filter
-      </Text>
-      {views.map((view) =>
-        view.slug === current ? (
-          // Active view: a primary button with nothing to navigate to.
-          <Button key={view.slug} size="sm" variant="primary" label={`${view.label} (${view.count})`} />
-        ) : (
-          <Button
-            key={view.slug}
-            size="sm"
-            variant="secondary"
-            label={`${view.label} (${view.count})`}
-            href={'./' + view.slug}
-          />
-        ),
-      )}
-    </HStack>
-  );
-}
+// One static page. The dataset holds entry level roles only, so there is no
+// level filter to render; the location filter is injected after render by
+// scripts/inject-location-filter.py because the renderer strips script.
 
 const columns = [
   {
@@ -75,33 +43,30 @@ const columns = [
   },
 ];
 
-export default function JobsPage({current, rows, heading}: {current: string; rows: Job[]; heading: string}) {
+export default function JobsPage({heading}: {heading: string}) {
   return (
     <Theme theme={themes[defaultThemeSlug]}>
       <VStack gap={4} padding={6}>
-        <VStack gap={2}>
-          <VStack gap={1}>
-            <Heading level={1}>{heading}</Heading>
-            <Text type="supporting" color="secondary">
-              {rows.length} open roles within about a 45-minute drive of Arden, NC, newest first.
-              Collected from public LinkedIn job listings on November 11, 2026. Each role links to
-              its original posting.
-            </Text>
-            <Text type="supporting" color="secondary">
-              The entry level page uses LinkedIn's own seniority field, with two overrides from
-              the job title: listings LinkedIn marks Not Applicable
-              are classified from the title (junior, trainee, apprentice, intern, crew, cashier and
-              similar hourly roles count as entry level), and titles showing rank above entry level
-              (manager, director, supervisor, lead, senior, foreman, journeyman) or a licensed
-              or credentialed role (physician, dentist, pharmacist, dietitian, physical therapist,
-              BCBA, registered nurse, licensed practical nurse, veterinarian, veterinary technician,
-              CDL driver, medical lab technician) count as not entry level.
-            </Text>
-          </VStack>
-          <FilterBar current={current} />
+        <VStack gap={1}>
+          <Heading level={1}>{heading}</Heading>
+          <Text type="supporting" color="secondary">
+            {jobs.length} open roles within about a 45-minute drive of Arden, NC, newest first.
+            Collected from public LinkedIn job listings on November 11, 2026. Each role links to
+            its original posting.
+          </Text>
+          <Text type="supporting" color="secondary">
+            Entry level uses LinkedIn's own seniority field, with two overrides from the job title:
+            listings LinkedIn marks Not Applicable are classified from the title (junior, trainee,
+            apprentice, intern, crew, cashier and similar hourly roles count as entry level), and
+            titles showing rank above entry level (manager, director, supervisor, lead, senior,
+            foreman, journeyman) or a licensed or credentialed role (physician, dentist,
+            pharmacist, dietitian, physical therapist, BCBA, registered nurse, licensed practical
+            nurse, veterinarian, veterinary technician, CDL driver, medical lab technician) are
+            left out.
+          </Text>
         </VStack>
         <Table<Job>
-          data={rows}
+          data={jobs}
           columns={columns}
           idKey="id"
           density="compact"
@@ -114,4 +79,4 @@ export default function JobsPage({current, rows, heading}: {current: string; row
   );
 }
 
-export {allJobs, entryJobs};
+export {jobs};

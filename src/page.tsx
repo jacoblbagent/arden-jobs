@@ -1,6 +1,6 @@
-import JobsPage, {allJobs} from './JobsPage';
+import JobsPage from './JobsPage';
 
-// All listings, unfiltered.
+// The only page: entry level roles, no level filter.
 export default function Page() {
-  return <JobsPage current="index.html" heading="Jobs around Arden, NC" rows={allJobs} />;
+  return <JobsPage heading="Jobs around Arden, NC" />;
 }

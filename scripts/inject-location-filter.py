@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Inline the location filter into the entry-level page.
+"""Inline the location filter into the jobs page.
 
 The Astryx renderer produces pages with no script, so the filter is added after
 the fact the same way the sortable headers are: one <style> and one <script>
 just before </body>, read from scripts/location-filter.{css,js} so the code
 stays reviewable. Re-running is a no-op thanks to the marker attribute.
 
-PAGES lists which rendered pages get the filter. Only the entry-level view has
-it for now; add a filename here to put it on another page.
+PAGES lists which rendered pages get the filter.
 """
 
 from pathlib import Path
@@ -15,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 MARKER = "data-arden-jobs-location"
-PAGES = ["entry-level.html"]
+PAGES = ["index.html"]
 
 css = (ROOT / "scripts" / "location-filter.css").read_text(encoding="utf-8")
 js = (ROOT / "scripts" / "location-filter.js").read_text(encoding="utf-8")
