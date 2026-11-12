@@ -32,9 +32,10 @@ stays tracked.
 ## Data
 
 `jobs.json` holds the deduped listings and `src/jobsData.ts` is the generated
-module the pages import. Level comes from LinkedIn's own seniority field; where LinkedIn reports Not Applicable or
-nothing, the job title decides and the Level column says so. Titles that show rank above
+module the pages import. Level comes from LinkedIn's own seniority field; where LinkedIn
+reports Not Applicable or nothing, the job title decides. Titles that show rank above
 entry level (manager, director, supervisor, lead, senior, foreman, journeyman) or a licensed
 practitioner role (physician, dentist, pharmacist, dietitian, physical therapist, BCBA) are
-listed as not entry level regardless of LinkedIn's field. Listings were collected on
+listed as not entry level regardless of LinkedIn's field. The level is not shown in the
+tables; it only decides which page a role appears on. Listings were collected on
 November 11, 2026.

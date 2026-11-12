@@ -65,12 +65,6 @@ const columns = [
     renderCell: (job: Job) => <Text type="body" color="secondary">{job.location}</Text>,
   },
   {
-    key: 'level' as const,
-    header: 'Level',
-    width: pixel(150),
-    renderCell: (job: Job) => <Text type="body" color="secondary">{job.levelText}</Text>,
-  },
-  {
     key: 'posted' as const,
     header: 'Posted',
     width: pixel(120),
@@ -96,12 +90,13 @@ export default function JobsPage({current, rows, heading}: {current: string; row
               its original posting.
             </Text>
             <Text type="supporting" color="secondary">
-              Level starts from LinkedIn's own seniority field. Listings LinkedIn marks Not
-              Applicable are classified from the job title (junior, trainee, apprentice, intern,
-              crew, cashier and similar hourly roles count as entry level). Titles that show rank
-              above entry level (manager, director, supervisor, lead, senior, foreman, journeyman)
-              or a licensed practitioner role (physician, dentist, pharmacist, dietitian, physical
-              therapist, BCBA) are counted as not entry level, whatever LinkedIn says.
+              The entry level and not entry level pages are split using LinkedIn's own seniority
+              field, with two overrides from the job title: listings LinkedIn marks Not Applicable
+              are classified from the title (junior, trainee, apprentice, intern, crew, cashier and
+              similar hourly roles count as entry level), and titles showing rank above entry level
+              (manager, director, supervisor, lead, senior, foreman, journeyman) or a licensed
+              practitioner role (physician, dentist, pharmacist, dietitian, physical therapist,
+              BCBA) count as not entry level.
             </Text>
           </VStack>
           <FilterBar current={current} />
