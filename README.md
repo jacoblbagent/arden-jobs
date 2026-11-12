@@ -14,8 +14,11 @@ Live: https://jacoblbagent.github.io/arden-jobs/
 | `docs/entry-level.html` | Entry level only (348) |
 | `docs/not-entry-level.html` | Above entry level (217) |
 
-Each file is self-contained: inlined CSS, no scripts, no network requests. The
-filter row links between the three files because the renderer strips script.
+Each file is self-contained: inlined CSS, no network requests. The filter row
+links between the three files because the renderer strips script. One inline
+script is added after render (see `scripts/table-sort.js`) so the column headers
+sort: click a header for ascending, again for descending, a third time to return
+to the rendered "newest first" order.
 
 ## Rebuilding
 

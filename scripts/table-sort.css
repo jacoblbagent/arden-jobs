@@ -1,0 +1,54 @@
+/* Affordance for the injected sorter. Header text stays where Astryx put it:
+   the button fills the cell's content box (no padding of its own, so the header
+   row keeps the exact height the renderer produced) and inherits font, colour
+   and text-align, which keeps the right-aligned Posted column right-aligned.
+
+   The indicator is inline SVG (see scripts/table-sort.js): a system-font arrow
+   glyph is not reliable on a page whose webfont is stripped. Unsorted shows both
+   triangles faintly as the "this column sorts" hint; the active direction shows
+   one triangle at full strength. */
+
+th.sortable .sort-btn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+th.sortable .sort-ind {
+  display: inline-block;
+  margin-left: 5px;
+  opacity: 0.35;
+  vertical-align: -1px;
+}
+
+th.sortable .sort-ind svg {
+  display: block;
+  fill: currentColor;
+}
+
+th.sortable .sort-btn:hover .sort-ind {
+  opacity: 0.75;
+}
+
+th.sortable .sort-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+th.sortable[aria-sort='ascending'] .sort-ind,
+th.sortable[aria-sort='descending'] .sort-ind {
+  opacity: 1;
+}
+
+th.sortable[aria-sort='ascending'] .sort-down,
+th.sortable[aria-sort='descending'] .sort-up {
+  display: none;
+}
