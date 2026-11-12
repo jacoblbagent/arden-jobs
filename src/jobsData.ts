@@ -160,16 +160,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level (from title)"
  },
  {
-  "id": "4487991764",
-  "title": "Parts Coordinator",
-  "company": "Gerber Collision & Glass",
-  "location": "East Flat Rock",
-  "posted": "Nov 10, 2026",
-  "url": "https://www.linkedin.com/jobs/view/parts-coordinator-at-gerber-collision-glass-4487991764",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4489640794",
   "title": "Tropical Smoothie Cafe - Asheville Regional Airport - Closers - $18/hr PLUS Tips !!",
   "company": "Paradies Lagardère",
@@ -288,16 +278,6 @@ export const jobs: Job[] = [
   "url": "https://www.linkedin.com/jobs/view/maintenance-technician-at-bridgestone-americas-4487962359",
   "level": "Entry level",
   "levelText": "Entry level"
- },
- {
-  "id": "4489147008",
-  "title": "Molding Operator - 2nd Shift",
-  "company": "Auria",
-  "location": "Old Fort",
-  "posted": "Nov 9, 2026",
-  "url": "https://www.linkedin.com/jobs/view/molding-operator-2nd-shift-at-auria-4489147008",
-  "level": "Entry level",
-  "levelText": "Entry level (from title)"
  },
  {
   "id": "4488445773",
@@ -420,16 +400,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4460759751",
-  "title": "Sand & Buff Production Associate",
-  "company": "TERREPOWER (formerly BBB Industries)",
-  "location": "Flat Rock",
-  "posted": "Nov 7, 2026",
-  "url": "https://www.linkedin.com/jobs/view/sand-buff-production-associate-at-terrepower-formerly-bbb-industries-4460759751",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4472213162",
   "title": "Warehouse Associate Inventory Accuracy II",
   "company": "Hubbell Incorporated",
@@ -520,42 +490,12 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4486247697",
-  "title": "Quality Lab Technician I",
-  "company": "Baxter International Inc.",
-  "location": "Marion",
-  "posted": "Nov 6, 2026",
-  "url": "https://www.linkedin.com/jobs/view/quality-lab-technician-i-at-baxter-international-inc-4486247697",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4487334034",
   "title": "Receptionist",
   "company": "The Arbor Company",
   "location": "Asheville",
   "posted": "Nov 6, 2026",
   "url": "https://www.linkedin.com/jobs/view/receptionist-at-the-arbor-company-4487334034",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4487351504",
-  "title": "Server / Cashier - FT",
-  "company": "TravelCenters of America",
-  "location": "Candler",
-  "posted": "Nov 6, 2026",
-  "url": "https://www.linkedin.com/jobs/view/server-cashier-ft-at-travelcenters-of-america-4487351504",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4487345743",
-  "title": "Store Cashier I",
-  "company": "TravelCenters of America",
-  "location": "Candler",
-  "posted": "Nov 6, 2026",
-  "url": "https://www.linkedin.com/jobs/view/store-cashier-i-at-travelcenters-of-america-4487345743",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -568,16 +508,6 @@ export const jobs: Job[] = [
   "url": "https://www.linkedin.com/jobs/view/testing-technician-1st-shift-at-borgwarner-4487310833",
   "level": "Entry level",
   "levelText": "Entry level (from title)"
- },
- {
-  "id": "4488419383",
-  "title": "Utility Locator",
-  "company": "UtiliQuest, LLC",
-  "location": "Landrum, SC",
-  "posted": "Nov 6, 2026",
-  "url": "https://www.linkedin.com/jobs/view/utility-locator-at-utiliquest-llc-4488419383",
-  "level": "Entry level",
-  "levelText": "Entry level"
  },
  {
   "id": "4486750488",
@@ -600,16 +530,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4486917129",
-  "title": "Cook - Swannanoa Valley Health & Rehab - Food",
-  "company": "Aramark",
-  "location": "Swannanoa",
-  "posted": "Nov 5, 2026",
-  "url": "https://www.linkedin.com/jobs/view/cook-swannanoa-valley-health-rehab-food-at-aramark-4486917129",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4487736446",
   "title": "Dental Patient Support Representative",
   "company": "Appalachian Mountain Health",
@@ -626,16 +546,6 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 5, 2026",
   "url": "https://www.linkedin.com/jobs/view/diesel-mechanic-maintenance-tech-iii-transit-fleet-nights-and-weekends-at-ratp-dev-usa-4488006607",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4486907254",
-  "title": "Dietary Aide - Swannanoa Valley Health & Rehab - Food",
-  "company": "Aramark",
-  "location": "Swannanoa",
-  "posted": "Nov 5, 2026",
-  "url": "https://www.linkedin.com/jobs/view/dietary-aide-swannanoa-valley-health-rehab-food-at-aramark-4486907254",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -800,16 +710,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4487520646",
-  "title": "Press Operator",
-  "company": "Consolidated Metco",
-  "location": "Canton",
-  "posted": "Nov 4, 2026",
-  "url": "https://www.linkedin.com/jobs/view/press-operator-at-consolidated-metco-4487520646",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4487097229",
   "title": "Quality Tech 1st Shift",
   "company": "Smurfit Westrock",
@@ -910,16 +810,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4486005227",
-  "title": "Trainer / Dining Room Server",
-  "company": "Acts Retirement-Life Communities",
-  "location": "Columbus",
-  "posted": "Nov 3, 2026",
-  "url": "https://www.linkedin.com/jobs/view/trainer-dining-room-server-at-acts-retirement-life-communities-4486005227",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4486462948",
   "title": "Administrative Assistant-Foundation",
   "company": "UNC Health",
@@ -960,32 +850,12 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4485967878",
-  "title": "Cook",
-  "company": "Cracker Barrel",
-  "location": "Flat Rock",
-  "posted": "Nov 1, 2026",
-  "url": "https://www.linkedin.com/jobs/view/cook-at-cracker-barrel-4485967878",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4485939963",
   "title": "Foster Placement Coordinator",
   "company": "Asheville Humane Society",
   "location": "Asheville",
   "posted": "Nov 1, 2026",
   "url": "https://www.linkedin.com/jobs/view/foster-placement-coordinator-at-asheville-humane-society-4485939963",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4441493101",
-  "title": "Maintenance Technician",
-  "company": "Magnera Corporation",
-  "location": "Candler",
-  "posted": "Nov 1, 2026",
-  "url": "https://www.linkedin.com/jobs/view/maintenance-technician-at-magnera-corporation-4441493101",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -1006,16 +876,6 @@ export const jobs: Job[] = [
   "location": "Arden",
   "posted": "Oct 31, 2026",
   "url": "https://www.linkedin.com/jobs/view/fab-machine-operator-press-brake-2nd-shift-at-eaton-4475230592",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4458645634",
-  "title": "Field Service Technician Training Program – Power Protection & Automation",
-  "company": "Siemens",
-  "location": "Columbus",
-  "posted": "Oct 31, 2026",
-  "url": "https://www.linkedin.com/jobs/view/field-service-technician-training-program-%E2%80%93-power-protection-automation-at-siemens-4458645634",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -1050,32 +910,12 @@ export const jobs: Job[] = [
   "levelText": "Entry level (from title)"
  },
  {
-  "id": "4485667172",
-  "title": "Reception & Special Projects Assistant - Full Time",
-  "company": "Black Mountain Home for Children, Youth & Families",
-  "location": "Black Mountain",
-  "posted": "Oct 31, 2026",
-  "url": "https://www.linkedin.com/jobs/view/reception-special-projects-assistant-full-time-at-black-mountain-home-for-children-youth-families-4485667172",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4485373557",
   "title": "AT&T Retail Sales Associate - Hourly + Commission",
   "company": "DSI",
   "location": "Asheville",
   "posted": "Oct 30, 2026",
   "url": "https://www.linkedin.com/jobs/view/at-t-retail-sales-associate-hourly-%2B-commission-at-dsi-4485373557",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4483476839",
-  "title": "Fabrication Repair Specialist",
-  "company": "TERREPOWER (formerly BBB Industries)",
-  "location": "Flat Rock",
-  "posted": "Oct 30, 2026",
-  "url": "https://www.linkedin.com/jobs/view/fabrication-repair-specialist-at-terrepower-formerly-bbb-industries-4483476839",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -1130,42 +970,12 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4477185455",
-  "title": "Production Operator - $20.50",
-  "company": "Magnera Corporation",
-  "location": "Candler",
-  "posted": "Oct 30, 2026",
-  "url": "https://www.linkedin.com/jobs/view/production-operator-%2420-50-at-magnera-corporation-4477185455",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4468387908",
   "title": "Production Technician",
   "company": "Ecolab",
   "location": "Asheville",
   "posted": "Oct 30, 2026",
   "url": "https://www.linkedin.com/jobs/view/production-technician-at-ecolab-4468387908",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4460117624",
-  "title": "Repipe and Installation Plumber",
-  "company": "Champion Comfort Experts",
-  "location": "Flat Rock · Asheville",
-  "posted": "Oct 30, 2026",
-  "url": "https://www.linkedin.com/jobs/view/repipe-and-installation-plumber-at-champion-comfort-experts-4460117624",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4377415251",
-  "title": "Setup Operator 2",
-  "company": "RBC Bearings",
-  "location": "Weaverville",
-  "posted": "Oct 30, 2026",
-  "url": "https://www.linkedin.com/jobs/view/setup-operator-2-at-rbc-bearings-4377415251",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -1198,16 +1008,6 @@ export const jobs: Job[] = [
   "url": "https://www.linkedin.com/jobs/view/commercial-plumber-at-w-n-kirkland-4421850786",
   "level": "Entry level",
   "levelText": "Internship"
- },
- {
-  "id": "4484790066",
-  "title": "Culinary Arts Coordinator",
-  "company": "Black Mountain Home for Children, Youth & Families",
-  "location": "Black Mountain",
-  "posted": "Oct 29, 2026",
-  "url": "https://www.linkedin.com/jobs/view/culinary-arts-coordinator-at-black-mountain-home-for-children-youth-families-4484790066",
-  "level": "Entry level",
-  "levelText": "Entry level"
  },
  {
   "id": "4485247613",
@@ -1260,32 +1060,12 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4459063254",
-  "title": "HVAC Maintenance Technician",
-  "company": "Champion Comfort Experts",
-  "location": "Flat Rock · Asheville",
-  "posted": "Oct 28, 2026",
-  "url": "https://www.linkedin.com/jobs/view/hvac-maintenance-technician-at-champion-comfort-experts-4459063254",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4448688287",
   "title": "Insurance Sales Agent 1 - Asheville, NC",
   "company": "AAA-The Auto Club Group",
   "location": "Asheville",
   "posted": "Oct 28, 2026",
   "url": "https://www.linkedin.com/jobs/view/insurance-sales-agent-1-asheville-nc-at-aaa-the-auto-club-group-4448688287",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4482298989",
-  "title": "Office Assistant",
-  "company": "The Goddard School",
-  "location": "Candler",
-  "posted": "Oct 28, 2026",
-  "url": "https://www.linkedin.com/jobs/view/office-assistant-at-the-goddard-school-4482298989",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -1590,16 +1370,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4480655792",
-  "title": "Production Technician I, Kiefel (7:00pm-7:00am)",
-  "company": "Baxter International Inc.",
-  "location": "Marion",
-  "posted": "Oct 23, 2026",
-  "url": "https://www.linkedin.com/jobs/view/production-technician-i-kiefel-7-00pm-7-00am-at-baxter-international-inc-4480655792",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4483130848",
   "title": "Sales Representative - Uniform",
   "company": "Cintas",
@@ -1880,26 +1650,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4479112547",
-  "title": "Brewista - Weaverville, NC",
-  "company": "7 Brew Coffee",
-  "location": "Weaverville",
-  "posted": "Oct 15, 2026",
-  "url": "https://www.linkedin.com/jobs/view/brewista-weaverville-nc-at-7-brew-coffee-4479112547",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4478173677",
-  "title": "Cashier",
-  "company": "Goodwill Industries of Northwest NC",
-  "location": "Pisgah Forest · Weaverville",
-  "posted": "Oct 15, 2026",
-  "url": "https://www.linkedin.com/jobs/view/cashier-at-goodwill-industries-of-northwest-nc-4478173677",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4479107488",
   "title": "Cook - Montreat College",
   "company": "Aramark",
@@ -1956,16 +1706,6 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 13, 2026",
   "url": "https://www.linkedin.com/jobs/view/medical-assistant-at-marathon-health-4476070509",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4476062906",
-  "title": "Diesel Technician- Canton, NC",
-  "company": "Velocity Vehicle Group",
-  "location": "Canton",
-  "posted": "Oct 12, 2026",
-  "url": "https://www.linkedin.com/jobs/view/diesel-technician-canton-nc-at-velocity-vehicle-group-4476062906",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -2210,16 +1950,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4478424717",
-  "title": "Full-Time Store Associate",
-  "company": "ALDI USA",
-  "location": "Weaverville · Asheville",
-  "posted": "Oct 1, 2026",
-  "url": "https://www.linkedin.com/jobs/view/full-time-store-associate-at-aldi-usa-4478424717",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4474123758",
   "title": "Receptionist - Family Practice",
   "company": "Haywood Regional Medical Center - A Duke LifePoint Hospital",
@@ -2290,32 +2020,12 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4470085634",
-  "title": "Auto Body Technician",
-  "company": "Gerber Collision & Glass",
-  "location": "Arden · East Flat Rock",
-  "posted": "Sep 25, 2026",
-  "url": "https://www.linkedin.com/jobs/view/auto-body-technician-at-gerber-collision-glass-4470085634",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4472046639",
   "title": "Quality Assurance Technician",
   "company": "Amcor",
   "location": "Asheville",
   "posted": "Sep 25, 2026",
   "url": "https://www.linkedin.com/jobs/view/quality-assurance-technician-at-amcor-4472046639",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4471657104",
-  "title": "SALES ASSOCIATE in CANDLER NC S13258",
-  "company": "Dollar General",
-  "location": "Candler",
-  "posted": "Sep 24, 2026",
-  "url": "https://www.linkedin.com/jobs/view/sales-associate-in-candler-nc-s13258-at-dollar-general-4471657104",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -2396,16 +2106,6 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Sep 18, 2026",
   "url": "https://www.linkedin.com/jobs/view/cook-pm-shift-3pm-at-parks-hospitality-group-4467861875",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4478757180",
-  "title": "DRIVER NON CDL - NC",
-  "company": "Kent Place School",
-  "location": "Flat Rock",
-  "posted": "Sep 18, 2026",
-  "url": "https://www.linkedin.com/jobs/view/driver-non-cdl-nc-at-kent-place-school-4478757180",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -2886,16 +2586,6 @@ export const jobs: Job[] = [
   "location": "Fletcher",
   "posted": "Jul 6, 2026",
   "url": "https://www.linkedin.com/jobs/view/sales-associate-asheville-regional-airport-at-paradies-lagard%C3%A8re-4437452996",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4434050355",
-  "title": "Truck Driver",
-  "company": "CRH",
-  "location": "Candler",
-  "posted": "Jun 26, 2026",
-  "url": "https://www.linkedin.com/jobs/view/truck-driver-at-crh-4434050355",
   "level": "Entry level",
   "levelText": "Entry level"
  },
