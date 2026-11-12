@@ -20,5 +20,6 @@ python3 scripts/inject-table-sort.py
 python3 scripts/inject-location-filter.py
 python3 scripts/inject-requirements.py
 python3 scripts/inject-favorites.py
+python3 scripts/inject-collapse-requirements.py
 
 echo "docs/ rebuilt: $(ls docs/*.html | wc -l) pages"

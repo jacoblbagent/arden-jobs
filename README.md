@@ -36,6 +36,16 @@ keeps the zebra intact; the sort and filter scripts treat a sub-row as part of
 the row above, so a sorted or filtered table never separates the two.
 `scripts/requirements.css` holds the styling.
 
+Clicking a listing's row folds its requirements away, and clicking it again
+brings them back. The row's title cell carries a chevron that turns to point at
+the fold, and the row takes a tab stop so Enter or Space toggles it too. Links
+and the favorites star keep their own clicks. The closed set is kept in
+localStorage under `arden-jobs.collapsed`, keyed by listing id, so a folded row
+stays folded through a reload, a sort, a filter, and a rebuild. That state is a
+class rather than the `hidden` attribute, which the filters already own on the
+sub-rows, so the two compose. `scripts/collapse-requirements.js` holds the code
+and `scripts/inject-collapse-requirements.py` inlines it.
+
 ## Rebuilding
 
 ```bash
