@@ -18,11 +18,14 @@ click a header for ascending, again for descending, a third time to return to
 the rendered "newest first" order.
 
 The page also carries a Location filter, added after render from
-`scripts/location-filter.{js,css}`: one select built from the Location cells,
-sorted by number of roles. Listings that name several towns ("Asheville ·
-Arden") match either one, so per-town counts can add up to more than the page
-total. Filtering and sorting compose: a filtered row set stays filtered while
-the columns sort. `scripts/inject-location-filter.py` lists which pages get it.
+`scripts/location-filter.{js,css}`: a multi-select built from the Location cells,
+sorted by number of roles, with Arden, Fletcher and Mills River checked on first
+paint. Checkbox changes apply instantly; Default restores that opening set and
+All clears the filter, and an empty selection reads as unfiltered. Listings that
+name several towns ("Asheville · Arden") match any one of their towns, so
+per-town counts can add up to more than the page total. Filtering and sorting
+compose: a filtered row set stays filtered while the columns sort.
+`scripts/inject-location-filter.py` lists which pages get it.
 
 ## Rebuilding
 
