@@ -126,25 +126,23 @@ tr.req-row.req-closed {
   display: none;
 }
 
-/* The chevron sits at the right edge of the title cell, centred on the row.
-   Absolutely placed because the role link is a stretched inline-flex box: a
-   sibling span would wrap onto its own line under a two-line title. The cell
-   reserves the gutter with padding so the title never runs under it. */
-tr.astryx-table-row[aria-controls] > td:first-child {
-  position: relative;
-  padding-right: 26px;
+/* The chevron sits immediately after the role title, a small gap off its last
+   word. The role link is an inline-flex box from the design system, which
+   shrink-wraps to the cell and would push a sibling span onto its own line
+   under a two-line title; as plain inline it wraps like running text, so the
+   chevron follows the title wherever it ends. */
+tr.astryx-table-row[aria-controls] > td:first-child > a.astryx-link {
+  display: inline;
 }
 
 .req-toggle {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 12px;
   height: 12px;
-  margin-top: -6px;
+  margin-left: 6px;
+  vertical-align: -1px;
   color: var(--color-text-secondary);
   opacity: 0.5;
   pointer-events: none;

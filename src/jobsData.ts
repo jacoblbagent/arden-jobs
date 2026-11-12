@@ -40,16 +40,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4481767988",
-  "title": "Medical Assistant",
-  "company": "HCA Healthcare",
-  "location": "Asheville · Arden",
-  "posted": "Nov 11, 2026",
-  "url": "https://www.linkedin.com/jobs/view/medical-assistant-at-hca-healthcare-4481767988",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4489907075",
   "title": "Pharmacy Technician II",
   "company": "Mission Health",
@@ -960,16 +950,6 @@ export const jobs: Job[] = [
   "levelText": "Entry level"
  },
  {
-  "id": "4485362980",
-  "title": "Medical Assistant",
-  "company": "DOCS Dermatology Group",
-  "location": "Asheville",
-  "posted": "Oct 30, 2026",
-  "url": "https://www.linkedin.com/jobs/view/medical-assistant-at-docs-dermatology-group-4485362980",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
   "id": "4468387908",
   "title": "Production Technician",
   "company": "Ecolab",
@@ -1696,16 +1676,6 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 13, 2026",
   "url": "https://www.linkedin.com/jobs/view/business-intelligence-analyst-at-blum-construction-4478130956",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4476070509",
-  "title": "Medical Assistant",
-  "company": "Marathon Health",
-  "location": "Asheville",
-  "posted": "Oct 13, 2026",
-  "url": "https://www.linkedin.com/jobs/view/medical-assistant-at-marathon-health-4476070509",
   "level": "Entry level",
   "levelText": "Entry level"
  },
@@ -2566,16 +2536,6 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Jul 13, 2026",
   "url": "https://www.linkedin.com/jobs/view/guest-services-dispatcher-full-time-at-omni-hotels-resorts-4439459811",
-  "level": "Entry level",
-  "levelText": "Entry level"
- },
- {
-  "id": "4436315477",
-  "title": "Engineering Technician II",
-  "company": "Terracon",
-  "location": "Arden",
-  "posted": "Jul 9, 2026",
-  "url": "https://www.linkedin.com/jobs/view/engineering-technician-ii-at-terracon-4436315477",
   "level": "Entry level",
   "levelText": "Entry level"
  },
