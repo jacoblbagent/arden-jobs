@@ -9,16 +9,14 @@ import {HStack} from '@astryxdesign/core/HStack';
 import {themes, defaultThemeSlug} from '../astryx-themes';
 import {jobs as allJobs, type Job} from './jobsData';
 
-// Three static views stand in for a filter: this file renders no script, so
+// Two static views stand in for a filter: this file renders no script, so
 // "entry level only" is a separate page rather than a checkbox. Counts and
 // links live in one place so the numbers can never drift from the pages.
 const entryJobs = allJobs.filter((job) => job.level === 'Entry level');
-const otherJobs = allJobs.filter((job) => job.level !== 'Entry level');
 
 const views = [
   {slug: 'index.html', label: 'All roles', count: allJobs.length},
   {slug: 'entry-level.html', label: 'Entry level', count: entryJobs.length},
-  {slug: 'not-entry-level.html', label: 'Not entry level', count: otherJobs.length},
 ];
 
 function FilterBar({current}: {current: string}) {
@@ -90,8 +88,8 @@ export default function JobsPage({current, rows, heading}: {current: string; row
               its original posting.
             </Text>
             <Text type="supporting" color="secondary">
-              The entry level and not entry level pages are split using LinkedIn's own seniority
-              field, with two overrides from the job title: listings LinkedIn marks Not Applicable
+              The entry level page uses LinkedIn's own seniority field, with two overrides from
+              the job title: listings LinkedIn marks Not Applicable
               are classified from the title (junior, trainee, apprentice, intern, crew, cashier and
               similar hourly roles count as entry level), and titles showing rank above entry level
               (manager, director, supervisor, lead, senior, foreman, journeyman) or a licensed
@@ -116,4 +114,4 @@ export default function JobsPage({current, rows, heading}: {current: string; row
   );
 }
 
-export {allJobs, entryJobs, otherJobs};
+export {allJobs, entryJobs};

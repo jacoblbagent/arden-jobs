@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Render the three Astryx pages straight into docs/, which is the published
+# Render the two Astryx pages straight into docs/, which is the published
 # artifact: GitHub Pages serves main:/docs at
 # https://jacoblbagent.github.io/arden-jobs/ and the tailnet Caddy site serves
 # the same folder. One output directory, no copy step.
@@ -10,7 +10,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 mkdir -p docs
-for page in page:index entry-level:entry-level not-entry-level:not-entry-level; do
+for page in page:index entry-level:entry-level; do
   src="src/${page%%:*}.tsx"
   out="docs/${page##*:}.html"
   npx @astryxdesign/cli experimental render "$src" --out "$out"

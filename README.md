@@ -12,10 +12,9 @@ Live: https://jacoblbagent.github.io/arden-jobs/
 |------|----------|
 | `docs/index.html` | All roles (565) |
 | `docs/entry-level.html` | Entry level only (321) |
-| `docs/not-entry-level.html` | Above entry level (244) |
 
 Each file is self-contained: inlined CSS, no network requests. The filter row
-links between the three files because the renderer strips script. One inline
+links between the two files because the renderer strips script. One inline
 script is added after render (see `scripts/table-sort.js`) so the column headers
 sort: click a header for ascending, again for descending, a third time to return
 to the rendered "newest first" order.
@@ -35,8 +34,8 @@ bash scripts/build-docs.sh
 git add -A && git commit -m "Rebuild pages" && git push
 ```
 
-`scripts/build-docs.sh` renders `src/page.tsx`, `src/entry-level.tsx` and
-`src/not-entry-level.tsx` into `docs/`, which GitHub Pages serves from `main`.
+`scripts/build-docs.sh` renders `src/page.tsx` and `src/entry-level.tsx` into
+`docs/`, which GitHub Pages serves from `main`.
 The renderer refuses to write into a path excluded by `.gitignore`, so `docs/`
 stays tracked.
 
@@ -50,5 +49,5 @@ or credentialed role (physician, dentist, pharmacist, dietitian, physical therap
 registered nurse, licensed practical nurse, veterinarian, veterinary technician, CDL driver,
 medical lab technician) are
 listed as not entry level regardless of LinkedIn's field. The level is not shown in the
-tables; it only decides which page a role appears on. Listings were collected on
+tables; it only decides which roles appear on the entry level page. Listings were collected on
 November 11, 2026.
