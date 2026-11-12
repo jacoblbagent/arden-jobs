@@ -7,13 +7,6 @@ sections and keeps the bullets from the sections whose heading reads as
 requirements (basic + preferred qualifications are merged). Each fetched page is
 cached under pages/<id>.html and the reduced result in requirements.json, so a
 re-run costs nothing and the extraction can be retuned offline.
-
-    python3 scripts/collect-requirements.py            # fetch what is missing
-    python3 scripts/collect-requirements.py --rebuild  # re-extract the cache
-    cp ~/.hermes/cache/scratch/arden/requirements.json src/requirements.json
-
-The cache lives outside the repo (it holds a few hundred fetched pages). Only
-src/requirements.json, the reduced result the page renders, is tracked.
 """
 
 import html
@@ -159,6 +152,9 @@ def clean_item(text):
         r"^(?:basic |preferred |minimum |required )?(?:qualifications?|requirements?)"
         r"\s*[:\-\u2013]?\s+(?=[A-Z0-9])",
         "", text, flags=re.I)
+    text = re.sub(r"^(knowledge,? and skills required for the position are|"
+                 r"knowledge, skills,? and abilities( required)?|skills and abilities required)"
+                 r"\s*:?\s+", "", text, flags=re.I)
     # Job-criteria fragments that are not requirements.
     if re.match(r"^(no travel|travel required|full[- ]time|part[- ]time|day shift|"
                 r"night shift|weekends|overtime|employment type|job function)\b", text, re.I):
@@ -199,6 +195,13 @@ def usable(text):
                     text, re.I):
         return False
     if re.match(r"^powered by\b", text, re.I):
+        return False
+    # Calls to action that end a posting's requirement list.
+    if re.match(r"^(ready to|learn more|apply (now|today)|click here|interested in|"
+                r"join (our|the) team|take the next step|next step|how to apply|"
+                r"don.?t see|what we offer)\b", text, re.I):
+        return False
+    if len(text) < 70 and text.endswith("?"):
         return False
     if EEO.search(text):
         return False
