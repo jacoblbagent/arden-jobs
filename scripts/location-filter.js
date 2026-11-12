@@ -177,19 +177,31 @@
     return names[0] + ', ' + names[1] + ' +' + (names.length - 2) + ' more';
   }
 
+  // The favorites filter (scripts/favorites.js) has its own state and its own
+  // control, but this filter owns the hidden attribute, so both filters are
+  // resolved here in one pass and reported with one count. favorites.js sets
+  // shared.favoritesOnly and shared.isFavorite, then calls shared.refresh.
+  var shared = (window.__ardenJobs = window.__ardenJobs || {});
+
   function apply() {
     var names = chosen();
     // An empty set would hide every row with no control left to explain it, so
     // it reads the same as "everything": no filter.
     var filtering = names.length > 0 && names.length < towns.length;
+    var favoritesOnly = !!shared.favoritesOnly;
+    var isFavorite = typeof shared.isFavorite === 'function' ? shared.isFavorite : null;
     var shown = 0;
 
     entries.forEach(function (entry) {
-      var visible =
-        !filtering ||
-        entry.towns.some(function (town) {
-          return selected[town];
-        });
+      // Favorites win over the town selection: a saved role is the reader's own
+      // shortlist, so checking Favorites must not hide one because its town
+      // happens to be unchecked.
+      var visible = favoritesOnly
+        ? (isFavorite ? isFavorite(entry.row) : false)
+        : !filtering ||
+          entry.towns.some(function (town) {
+            return selected[town];
+          });
       entry.row.hidden = !visible;
       entry.panels.forEach(function (panel) {
         panel.hidden = !visible;
@@ -200,8 +212,11 @@
     var text = summary(names);
     value.textContent = text;
     button.setAttribute('aria-label', 'Location: ' + text);
-    status.textContent = filtering ? 'Showing ' + shown + ' of ' + entries.length : '';
+    status.textContent =
+      filtering || favoritesOnly ? 'Showing ' + shown + ' of ' + entries.length : '';
   }
+
+  shared.refresh = apply;
 
   // The panel is fixed to the button, not absolutely placed inside it: the
   // table sits in a scroll wrapper, and an absolute panel would be clipped by

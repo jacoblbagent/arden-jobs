@@ -1,0 +1,118 @@
+/* Favorites: a star per listing and a "Favorites" checkbox beside the location
+   filter. Injected after render by scripts/inject-favorites.py, so everything
+   here is scoped to the injected class names and draws its colours from the
+   theme's custom properties (light and dark follow for free). */
+
+/* The star sits before the role link inside the title cell. It is a button, so
+   it must not pick up the cell's line-height or wrap onto its own line. */
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 6px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: none;
+  color: var(--color-text-secondary);
+  vertical-align: -4px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.fav-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-overlay-hover, var(--color-border));
+}
+
+.fav-btn:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 1px;
+}
+
+.fav-btn svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  overflow: visible;
+}
+
+/* Outline star at rest, filled star when saved. One path, two paint jobs. */
+.fav-btn svg path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.fav-btn[aria-pressed='true'] {
+  color: var(--color-accent);
+}
+
+.fav-btn[aria-pressed='true'] svg path {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* The checkbox rides in the location filter's flex row when that filter is
+   present, and in its own row when it is not. */
+.fav-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px 0 8px;
+  border-radius: 10px;
+  background: var(--color-border);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.fav-filter:hover {
+  background: var(--color-overlay-hover, var(--color-border));
+}
+
+.fav-filter-check {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.fav-filter-check:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.fav-filter[data-empty='true'] {
+  color: var(--color-text-secondary);
+  background: none;
+  cursor: default;
+}
+
+.fav-filter[data-empty='true'] .fav-filter-check {
+  cursor: default;
+}
+
+.fav-filter-num {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+}
+
+.fav-filter-num[data-zero='true'] {
+  display: none;
+}
+
+/* Rows carry the hidden attribute; the table's own display rules must not win
+   over it (same guard the location filter needs). */
+tbody tr[hidden] {
+  display: none;
+}

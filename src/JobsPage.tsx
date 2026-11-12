@@ -55,29 +55,7 @@ export default function JobsPage({heading}: {heading: string}) {
   return (
     <Theme theme={themes[defaultThemeSlug]}>
       <VStack gap={4} padding={6}>
-        <VStack gap={1}>
-          <Heading level={1}>{heading}</Heading>
-          <Text type="supporting" color="secondary">
-            {jobs.length} open roles within about a 45-minute drive of Arden, NC, newest first.
-            Collected from public LinkedIn job listings on November 11, 2026. Each role links to
-            its original posting.
-          </Text>
-          <Text type="supporting" color="secondary">
-            Entry level uses LinkedIn's own seniority field, with two overrides from the job title:
-            listings LinkedIn marks Not Applicable are classified from the title (junior, trainee,
-            apprentice, intern, crew, cashier and similar hourly roles count as entry level), and
-            titles showing rank above entry level (manager, director, supervisor, lead, senior,
-            foreman, journeyman) or a licensed or credentialed role (physician, dentist,
-            pharmacist, dietitian, physical therapist, BCBA, registered nurse, licensed practical
-            nurse, veterinarian, veterinary technician, CDL driver, medical lab technician) are
-            left out.
-          </Text>
-          <Text type="supporting" color="secondary">
-            Requirements under each role are the bullet list from that posting's own requirements
-            or qualifications section, up to eight per role. Where a posting lists none, the row
-            says so. Open the posting for the full text.
-          </Text>
-        </VStack>
+        <Heading level={1}>{heading}</Heading>
         <Table<Job>
           data={jobs}
           columns={columns}
