@@ -95,8 +95,9 @@ export default function JobsPage({current, rows, heading}: {current: string; row
               are classified from the title (junior, trainee, apprentice, intern, crew, cashier and
               similar hourly roles count as entry level), and titles showing rank above entry level
               (manager, director, supervisor, lead, senior, foreman, journeyman) or a licensed
-              practitioner role (physician, dentist, pharmacist, dietitian, physical therapist,
-              BCBA) count as not entry level.
+              or credentialed role (physician, dentist, pharmacist, dietitian, physical therapist,
+              BCBA, registered nurse, licensed practical nurse, veterinarian, veterinary technician,
+              CDL driver, medical lab technician) count as not entry level.
             </Text>
           </VStack>
           <FilterBar current={current} />

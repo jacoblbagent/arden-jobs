@@ -1,5 +1,3 @@
-export type Job = {id: string; title: string; company: string; location: string; posted: string; url: string; level: 'Entry level' | 'Not entry level'; levelText: string};
-
 export const jobs: Job[] = [
  {
   "id": "4487481330",
@@ -8,8 +6,8 @@ export const jobs: Job[] = [
   "location": "Arden",
   "posted": "Nov 11, 2026",
   "url": "https://www.linkedin.com/jobs/view/associate-veterinarian-pinnacle-animal-hospital-sign-on-bonus-available%21-at-heartland-veterinary-partners-4487481330",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4489660931",
@@ -288,8 +286,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Nov 10, 2026",
   "url": "https://www.linkedin.com/jobs/view/medical-lab-technician-ii-ascp-certified-at-unc-health-4489166862",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4487991764",
@@ -608,8 +606,8 @@ export const jobs: Job[] = [
   "location": "Clyde",
   "posted": "Nov 8, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-nurse-rn-behavioral-health-at-lifepoint-health%C2%AE-4488777878",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4488807175",
@@ -698,8 +696,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 7, 2026",
   "url": "https://www.linkedin.com/jobs/view/mental-health-nurse-rn-at-mission-health-4480578024",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4480568391",
@@ -788,8 +786,8 @@ export const jobs: Job[] = [
   "location": "Waynesville",
   "posted": "Nov 6, 2026",
   "url": "https://www.linkedin.com/jobs/view/cdl-a-local-delivery-truck-driver-at-sysco-4488149235",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4461312379",
@@ -1038,8 +1036,8 @@ export const jobs: Job[] = [
   "location": "Weaverville",
   "posted": "Nov 6, 2026",
   "url": "https://www.linkedin.com/jobs/view/veterinary-technician-at-veterinary-practice-partners-4488177377",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4485032038",
@@ -1228,8 +1226,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 5, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-nurse-ambulatory-specialty-plastics-reconstructive-surgery-at-novant-health-4484384580",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4485877000",
@@ -1318,8 +1316,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 4, 2026",
   "url": "https://www.linkedin.com/jobs/view/commercial-driver-%E2%80%93-full-time-at-autozone-4486355915",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4476481319",
@@ -1348,8 +1346,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 4, 2026",
   "url": "https://www.linkedin.com/jobs/view/home-health-baylor-registered-nurse-at-centerwell-home-health-4476496466",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4476482962",
@@ -1508,8 +1506,8 @@ export const jobs: Job[] = [
   "location": "Waynesville",
   "posted": "Nov 4, 2026",
   "url": "https://www.linkedin.com/jobs/view/veterinarian-at-mission-pet-health-4485046036",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4485637692",
@@ -1848,8 +1846,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 31, 2026",
   "url": "https://www.linkedin.com/jobs/view/oncology-registered-nurse-at-mission-health-4459652794",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4467882745",
@@ -1908,8 +1906,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 30, 2026",
   "url": "https://www.linkedin.com/jobs/view/driver-class-b-cdl-delivery-at-builders-firstsource-4423230266",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4483476839",
@@ -2028,8 +2026,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 30, 2026",
   "url": "https://www.linkedin.com/jobs/view/portable-storage-delivery-driver-cdl-at-u-haul-4485623595",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4477185455",
@@ -2058,8 +2056,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville · Asheville",
   "posted": "Oct 30, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-nurse-at-hca-healthcare-4461715127",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4460117624",
@@ -2198,8 +2196,8 @@ export const jobs: Job[] = [
   "location": "Henderson County",
   "posted": "Oct 29, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-nurse-rn-or-licensed-practical-nurse-lpn-at-sanstone-health-rehabilitation-4484558415",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4448623609",
@@ -2668,8 +2666,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 25, 2026",
   "url": "https://www.linkedin.com/jobs/view/licensed-veterinary-technician-lvt-at-nva-general-practice-4399588467",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4482682039",
@@ -3058,8 +3056,8 @@ export const jobs: Job[] = [
   "location": "Asheville · Candler",
   "posted": "Oct 22, 2026",
   "url": "https://www.linkedin.com/jobs/view/lpn-rn-pediatric-home-health-nurse-at-angels-of-care-pediatric-home-health-4481744737",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4446336996",
@@ -3098,8 +3096,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Oct 22, 2026",
   "url": "https://www.linkedin.com/jobs/view/rn-perioperative-clinic-at-adventhealth-4482472134",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4482731486",
@@ -3318,8 +3316,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 20, 2026",
   "url": "https://www.linkedin.com/jobs/view/veterinary-technician-animal-hospital-of-north-asheville-at-petvet-care-centers-4478651018",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4478617062",
@@ -3548,8 +3546,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 14, 2026",
   "url": "https://www.linkedin.com/jobs/view/emergency-veterinary-technician-overnights-at-medvet-4479538988",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4479752536",
@@ -3688,8 +3686,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Oct 12, 2026",
   "url": "https://www.linkedin.com/jobs/view/rn-surgical-clinic-at-adventhealth-4477874489",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4476065903",
@@ -3828,8 +3826,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Oct 6, 2026",
   "url": "https://www.linkedin.com/jobs/view/idd-registered-nurse-rn-at-rha-health-services-llc-4475128416",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4475128019",
@@ -3988,8 +3986,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Sep 30, 2026",
   "url": "https://www.linkedin.com/jobs/view/class-a-commercial-driver-night-shift-at-carmax-4470359894",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4473726490",
@@ -4118,8 +4116,8 @@ export const jobs: Job[] = [
   "location": "Flat Rock",
   "posted": "Sep 28, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-nurse-home-health-at-unc-health-4473035248",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4482479217",
@@ -4568,8 +4566,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Aug 28, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-nurse-at-wellpath-4459420058",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4460182418",
@@ -4838,8 +4836,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Aug 3, 2026",
   "url": "https://www.linkedin.com/jobs/view/new-graduate-registered-nurse-at-unc-health-4448326140",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4447870571",
@@ -5428,8 +5426,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Feb 11, 2026",
   "url": "https://www.linkedin.com/jobs/view/rn-new-nurse-at-bayada-home-health-care-4370772796",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4360799677",
