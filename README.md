@@ -10,7 +10,7 @@ Live: https://jacoblbagent.github.io/arden-jobs/
 
 | File | Contents |
 |------|----------|
-| `docs/index.html` | Entry level roles (290) |
+| `docs/index.html` | Entry level roles (286) |
 
 The file is self-contained: inlined CSS, no network requests. One inline script
 is added after render (see `scripts/table-sort.js`) so the column headers sort:
