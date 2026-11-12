@@ -27,6 +27,15 @@ per-town counts can add up to more than the page total. Filtering and sorting
 compose: a filtered row set stays filtered while the columns sort.
 `scripts/inject-location-filter.py` lists which pages get it.
 
+Each listing carries its requirements as a sub-row underneath it, added after
+render by `scripts/inject-requirements.py` from `src/requirements.json`. The
+sub-row spans the table and hangs off the row above with a connector rule, so it
+reads as that listing's detail rather than a second listing. It is marked
+`data-expansion-panel`, the attribute the table's striping already skips, which
+keeps the zebra intact; the sort and filter scripts treat a sub-row as part of
+the row above, so a sorted or filtered table never separates the two.
+`scripts/requirements.css` holds the styling.
+
 ## Rebuilding
 
 ```bash
@@ -51,3 +60,15 @@ technician) are left out regardless of LinkedIn's field. The level is not shown
 in the table. Listings were collected on November 11, 2026.
 
 `jobs.json` is the raw collected dump, before the level split.
+
+`src/requirements.json` holds each listing's requirements, keyed by job id, with
+`req` (up to eight items) and `total` (how many the posting carried, so a list cut
+at the cap says so). The items are the posting's own bullet list under a
+requirements or qualifications heading, with basic and preferred qualifications
+merged; benefits, pay, duty lists and trailing company boilerplate are dropped.
+A posting that lists none stores an empty list and the page says so.
+
+`scripts/collect-requirements.py` produces that file: it fetches each posting,
+caches the page under `~/.hermes/cache/scratch/arden/`, and reduces it to the
+requirements list. `--rebuild` re-extracts the cached pages after a change to the
+filters, so retuning costs no requests.

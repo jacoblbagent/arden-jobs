@@ -1,0 +1,109 @@
+/* Requirements under each listing. The block hangs off the row above it: a rule
+   drops from the row's bottom edge and turns right into the block, so the
+   block reads as that listing's own detail rather than a second listing.
+
+   The sub-row carries data-expansion-panel, which the table's striping already
+   excludes from `:nth-child(even of :not([data-expansion-panel]))` - so the
+   zebra and the "newest first" alternation stay exactly as they were. */
+
+:root {
+  /* The table's border token is 10% alpha, too faint to read as a connector. */
+  --req-connector: color-mix(in srgb, var(--color-text-secondary) 85%, transparent);
+}
+
+tr.req-row {
+  background: transparent;
+}
+
+tr.req-row > td.req-cell {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  vertical-align: top;
+}
+
+.req-branch {
+  position: relative;
+  /* Left inset lines the elbow up under the row's own title text, not under the
+     table edge. */
+  margin-left: 8px;
+  padding: 4px 24px 12px 20px;
+}
+
+/* The connector: a rule from the row's divider running the full height of the
+   block, with a stub turning right into the label. Drawn on the wrapper so it
+   never widens the cell. The table's own border token is 10% alpha and reads as
+   nothing here, so the connector borrows the secondary text colour at partial
+   strength. */
+.req-branch::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  bottom: 12px;
+  border-left: 1px solid var(--req-connector);
+}
+
+.req-branch::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 16px;
+  border-top: 1px solid var(--req-connector);
+}
+
+.req-label {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--color-text-secondary);
+}
+
+.req-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 78ch;
+}
+
+.req-list li {
+  position: relative;
+  padding-left: 13px;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+.req-list li.req-certification {
+  color: light-dark(#806000, #f4cc55);
+}
+
+.req-list li::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.45;
+}
+
+.req-more,
+.req-none {
+  margin: 5px 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+/* Certification text uses a contrasting yellow for each color scheme. */

@@ -27,7 +27,15 @@
   if (!header || !body) return;
 
   var column = header.cellIndex;
-  var entries = Array.prototype.slice.call(body.rows).map(function (row) {
+  // A requirements sub-row (data-expansion-panel) has one full-width cell, so
+  // it is not a listing: it is recorded as its listing's panel and follows that
+  // row's visibility.
+  var entries = [];
+  Array.prototype.forEach.call(body.rows, function (row) {
+    if (row.hasAttribute('data-expansion-panel')) {
+      if (entries.length) entries[entries.length - 1].panels.push(row);
+      return;
+    }
     var text = (row.cells[column].textContent || '').trim();
     var towns = text
       .split(SEPARATOR)
@@ -35,7 +43,7 @@
         return town.trim();
       })
       .filter(Boolean);
-    return {row: row, towns: towns};
+    entries.push({row: row, towns: towns, panels: []});
   });
 
   // Count each town once per listing, not once per label.
@@ -183,6 +191,9 @@
           return selected[town];
         });
       entry.row.hidden = !visible;
+      entry.panels.forEach(function (panel) {
+        panel.hidden = !visible;
+      });
       if (visible) shown += 1;
     });
 

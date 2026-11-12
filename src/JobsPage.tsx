@@ -72,6 +72,11 @@ export default function JobsPage({heading}: {heading: string}) {
             nurse, veterinarian, veterinary technician, CDL driver, medical lab technician) are
             left out.
           </Text>
+          <Text type="supporting" color="secondary">
+            Requirements under each role are the bullet list from that posting's own requirements
+            or qualifications section, up to eight per role. Where a posting lists none, the row
+            says so. Open the posting for the full text.
+          </Text>
         </VStack>
         <Table<Job>
           data={jobs}

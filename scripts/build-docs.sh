@@ -18,5 +18,6 @@ touch docs/.nojekyll
 # fact from scripts/table-sort.{js,css}. Everything else in the page is untouched.
 python3 scripts/inject-table-sort.py
 python3 scripts/inject-location-filter.py
+python3 scripts/inject-requirements.py
 
 echo "docs/ rebuilt: $(ls docs/*.html | wc -l) pages"

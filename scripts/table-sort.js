@@ -64,13 +64,28 @@
     var body = table.querySelector('tbody');
     if (!headers.length || !body) return;
 
+    // Rows move in groups: a requirements sub-row (data-expansion-panel) is its
+    // listing's own continuation, so it travels with the row above it instead
+    // of being sorted as a row of its own.
+    function rowGroups() {
+      var groups = [];
+      Array.prototype.forEach.call(body.rows, function (row) {
+        if (row.hasAttribute('data-expansion-panel') && groups.length) {
+          groups[groups.length - 1].push(row);
+        } else {
+          groups.push([row]);
+        }
+      });
+      return groups;
+    }
+
     // Row order as rendered, kept for the unsorted state.
-    var original = Array.prototype.slice.call(body.rows);
+    var original = rowGroups();
     var sort = {key: null, direction: 'none'};
 
-    function rowsWithCells() {
-      return Array.prototype.slice.call(body.rows).map(function (row, index) {
-        return {row: row, index: index, cell: row.cells[sort.index]};
+    function groupsWithCells() {
+      return rowGroups().map(function (group, index) {
+        return {group: group, index: index, cell: group[0].cells[sort.index]};
       });
     }
 
@@ -82,26 +97,30 @@
         th.setAttribute('aria-sort', th.cellIndex === index ? direction : 'none');
       });
 
-      var entries = rowsWithCells();
+      var entries = groupsWithCells();
       if (direction === 'none') {
         // Restore the order the page was rendered in, not just an equal sort:
         // the ids are already newest first, but replaying the captured rows is
         // what makes the unsorted state exactly the first-paint table.
-        original.forEach(function (row) {
-          body.appendChild(row);
+        original.forEach(function (group) {
+          group.forEach(function (row) {
+            body.appendChild(row);
+          });
         });
         return;
       }
 
       var sign = direction === 'ascending' ? 1 : -1;
       entries.sort(function (a, b) {
-        var result = compare(sort.key, a, b);
+        var result = compare(sort.key, a.cell, b.cell);
         return result !== 0 ? result * sign : a.index - b.index;
       });
 
       var fragment = document.createDocumentFragment();
       entries.forEach(function (entry) {
-        fragment.appendChild(entry.row);
+        entry.group.forEach(function (row) {
+          fragment.appendChild(row);
+        });
       });
       body.appendChild(fragment);
     }
