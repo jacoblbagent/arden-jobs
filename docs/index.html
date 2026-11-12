@@ -918,18 +918,20 @@ th.sortable[aria-sort='descending'] .sort-up {
   var STATES = ['ascending', 'descending', 'none'];
 
   // Text columns compare case- and accent-insensitively with numbers in order
-  // ("Site 2" before "Site 10"). Posted compares as a date.
+  // ("Site 2" before "Site 10"). Posted compares as a date. Both arguments are
+  // cells, not the {cell} entries: sorting a whole row would read the text of
+  // every column at once.
   function textValue(cell) {
-    return (cell.textContent || '').trim();
+    return cell ? (cell.textContent || '').trim() : '';
   }
 
-  function compare(key, a, b) {
+  function compare(key, cellA, cellB) {
     if (key === 'posted') {
-      var da = Date.parse(textValue(a.cell));
-      var db = Date.parse(textValue(b.cell));
+      var da = Date.parse(textValue(cellA));
+      var db = Date.parse(textValue(cellB));
       return (isNaN(da) ? 0 : da) - (isNaN(db) ? 0 : db);
     }
-    return textValue(a.cell).localeCompare(textValue(b.cell), 'en', {
+    return textValue(cellA).localeCompare(textValue(cellB), 'en', {
       numeric: true,
       sensitivity: 'base',
     });
