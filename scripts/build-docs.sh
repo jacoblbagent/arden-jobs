@@ -21,5 +21,6 @@ touch docs/.nojekyll
 # The renderer writes no script, so the sortable headers are inlined after the
 # fact from scripts/table-sort.{js,css}. Everything else in the page is untouched.
 python3 scripts/inject-table-sort.py
+python3 scripts/inject-location-filter.py
 
 echo "docs/ rebuilt: $(ls docs/*.html | wc -l) pages"

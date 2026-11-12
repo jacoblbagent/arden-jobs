@@ -20,6 +20,14 @@ script is added after render (see `scripts/table-sort.js`) so the column headers
 sort: click a header for ascending, again for descending, a third time to return
 to the rendered "newest first" order.
 
+The entry level page also carries a Location filter, added after render from
+`scripts/location-filter.{js,css}`: one select built from the Location cells,
+sorted by number of roles. Listings that name several towns ("Asheville ·
+Arden") match either one, so per-town counts can add up to more than the page
+total. Filtering and sorting compose: a filtered row set stays filtered while
+the columns sort. `scripts/inject-location-filter.py` lists which pages get it;
+add a filename there to put the filter on another view.
+
 ## Rebuilding
 
 ```bash

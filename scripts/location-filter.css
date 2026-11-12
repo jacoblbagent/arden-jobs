@@ -1,0 +1,77 @@
+/* The injected location filter: one label, one select, one live count. The row
+   mirrors the Astryx filter row above it (14px/500 text, 28px tall, 10px
+   radius, translucent fill) so the two read as one control group, and every
+   colour comes from the theme's custom properties so it follows light and dark
+   mode without a second palette. */
+
+.loc-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  /* The stack above applies a 16px gap to every child; the two filter rows
+     belong together, so pull this row up to half that. */
+  margin-top: -8px;
+}
+
+.loc-filter-label,
+.loc-filter-count {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-text-secondary);
+}
+
+.loc-filter-count {
+  font-variant-numeric: tabular-nums;
+}
+
+.loc-filter-field {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.loc-filter-select {
+  height: 28px;
+  max-width: 240px;
+  padding: 0 30px 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-border);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.loc-filter-select:hover {
+  background: var(--color-overlay-hover, var(--color-border));
+}
+
+.loc-filter-select:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.loc-filter-chevron {
+  position: absolute;
+  right: 11px;
+  display: flex;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.loc-filter-chevron svg {
+  display: block;
+  fill: currentColor;
+}
+
+/* Rows carry the hidden attribute; make sure the table's own display rules do
+   not win over it. */
+tbody tr[hidden] {
+  display: none;
+}
