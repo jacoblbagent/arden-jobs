@@ -88,8 +88,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 11, 2026",
   "url": "https://www.linkedin.com/jobs/view/oncology-clinical-nurse-coordinator-at-mission-health-4455385406",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4489672707",
@@ -328,8 +328,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Nov 10, 2026",
   "url": "https://www.linkedin.com/jobs/view/treatment-coordinator-registered-nurse-rn-at-life-care-centers-of-america-4478288973",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4489640794",
@@ -658,8 +658,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville · Asheville",
   "posted": "Nov 7, 2026",
   "url": "https://www.linkedin.com/jobs/view/admissions-and-marketing-director-at-saber-healthcare-group-4487375974",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4486293921",
@@ -828,8 +828,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 6, 2026",
   "url": "https://www.linkedin.com/jobs/view/full-time-sales-supervisor-asheville-nc-at-spartina-449-4488169284",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4486276697",
@@ -1278,8 +1278,8 @@ export const jobs: Job[] = [
   "location": "Mills River",
   "posted": "Nov 5, 2026",
   "url": "https://www.linkedin.com/jobs/view/social-media-manager-at-microtech-knives-4487740988",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4485873175",
@@ -1358,8 +1358,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Nov 4, 2026",
   "url": "https://www.linkedin.com/jobs/view/home-health-registered-nurse-case-manager-at-centerwell-home-health-4476482962",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4468923442",
@@ -1668,8 +1668,8 @@ export const jobs: Job[] = [
   "location": "Black Mountain",
   "posted": "Nov 2, 2026",
   "url": "https://www.linkedin.com/jobs/view/mds-coordinator-at-yad-healthcare-4486458892",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4484375452",
@@ -2208,8 +2208,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 29, 2026",
   "url": "https://www.linkedin.com/jobs/view/retail-pharmacist-at-hca-healthcare-4448623609",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4484905772",
@@ -2218,8 +2218,8 @@ export const jobs: Job[] = [
   "location": "Gerton",
   "posted": "Oct 29, 2026",
   "url": "https://www.linkedin.com/jobs/view/rhrp-in-clinic-general-dentistry-at-dentrust-optimized-care-solutions-4484905772",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4484536744",
@@ -2238,8 +2238,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 29, 2026",
   "url": "https://www.linkedin.com/jobs/view/senior-associate-tax-at-forvis-mazars-us-4483064287",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4483041102",
@@ -2348,8 +2348,8 @@ export const jobs: Job[] = [
   "location": "Candler",
   "posted": "Oct 28, 2026",
   "url": "https://www.linkedin.com/jobs/view/lead-teacher-at-the-goddard-school-4482505646",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4483878197",
@@ -3228,8 +3228,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 21, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-dietitian-pace-program-at-hca-healthcare-4341205957",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4471783247",
@@ -3538,8 +3538,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Oct 14, 2026",
   "url": "https://www.linkedin.com/jobs/view/clinical-pharmacist-at-sona-pharmacies-4479288348",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4479538988",
@@ -3588,8 +3588,8 @@ export const jobs: Job[] = [
   "location": "Fletcher",
   "posted": "Oct 14, 2026",
   "url": "https://www.linkedin.com/jobs/view/journeyman-at-imoco-inc-4476663367",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4479712212",
@@ -4128,8 +4128,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Sep 27, 2026",
   "url": "https://www.linkedin.com/jobs/view/physical-therapist-pt-outpatient-sign-on-bonus-at-h2-health-4482479217",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4470085634",
@@ -4278,8 +4278,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Sep 21, 2026",
   "url": "https://www.linkedin.com/jobs/view/pharmacist-at-pharmerica-4467623509",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4469902961",
@@ -4388,8 +4388,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Sep 14, 2026",
   "url": "https://www.linkedin.com/jobs/view/management-at-atlanta-swim-academy-4464787581",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4466473235",
@@ -4598,8 +4598,8 @@ export const jobs: Job[] = [
   "location": "Candler",
   "posted": "Aug 26, 2026",
   "url": "https://www.linkedin.com/jobs/view/lead-preschool-teacher-at-the-goddard-school-4457258163",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4457197860",
@@ -4668,8 +4668,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Aug 20, 2026",
   "url": "https://www.linkedin.com/jobs/view/kitchen-manager-at-atlanta-swim-academy-4454101039",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4456746694",
@@ -4778,8 +4778,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Aug 11, 2026",
   "url": "https://www.linkedin.com/jobs/view/physical-therapist-full-time-pt-at-continuum-therapy-partners-llc-4449867539",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4451484965",
@@ -4788,8 +4788,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Aug 10, 2026",
   "url": "https://www.linkedin.com/jobs/view/family-medicine-physician-at-western-north-carolina-community-health-services-wncchs-4451484965",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4446645987",
@@ -5098,8 +5098,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Jul 3, 2026",
   "url": "https://www.linkedin.com/jobs/view/board-certified-behavior-analyst-bcba-at-alpaca-health-4436470159",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4436756423",
@@ -5108,8 +5108,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Jul 3, 2026",
   "url": "https://www.linkedin.com/jobs/view/neurology-where-mountain-mornings-meet-meaningful-medicine-at-adventhealth-4436756423",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4436457831",
@@ -5118,8 +5118,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Jul 3, 2026",
   "url": "https://www.linkedin.com/jobs/view/start-an-aba-practice-board-certified-behavior-analyst-bcba-at-alpaca-health-4436457831",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4434050355",
@@ -5148,8 +5148,8 @@ export const jobs: Job[] = [
   "location": "Hendersonville",
   "posted": "Jun 22, 2026",
   "url": "https://www.linkedin.com/jobs/view/registered-dietitian-at-saber-healthcare-group-4430599199",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4422894986",
@@ -5198,8 +5198,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Jun 3, 2026",
   "url": "https://www.linkedin.com/jobs/view/engineering-class-1-electrician-at-omni-hotels-resorts-4424273039",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4416984852",
@@ -5448,8 +5448,8 @@ export const jobs: Job[] = [
   "location": "Asheville",
   "posted": "Jan 12, 2026",
   "url": "https://www.linkedin.com/jobs/view/journeyman-electrician-at-we-power-america-4369947313",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "4359666416",
@@ -5618,8 +5618,8 @@ export const jobs: Job[] = [
   "location": "Asheville · Hendersonville",
   "posted": "Feb 27, 2025",
   "url": "https://www.linkedin.com/jobs/view/overhead-crew-all-positions-foreman-a-b-c-lineman-operator-groundman-at-sumter-utilities-inc-4169458978",
-  "level": "Entry level",
-  "levelText": "Entry level"
+  "level": "Not entry level",
+  "levelText": "Above entry level (from title)"
  },
  {
   "id": "3906128235",

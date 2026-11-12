@@ -11,8 +11,8 @@ Live: https://jacoblbagent.github.io/arden-jobs/
 | File | Contents |
 |------|----------|
 | `docs/index.html` | All roles (565) |
-| `docs/entry-level.html` | Entry level only (376) |
-| `docs/not-entry-level.html` | Above entry level (189) |
+| `docs/entry-level.html` | Entry level only (348) |
+| `docs/not-entry-level.html` | Above entry level (217) |
 
 Each file is self-contained: inlined CSS, no scripts, no network requests. The
 filter row links between the three files because the renderer strips script.
@@ -32,6 +32,9 @@ stays tracked.
 ## Data
 
 `jobs.json` holds the deduped listings and `src/jobsData.ts` is the generated
-module the pages import. Level comes from LinkedIn's own seniority field; where
-LinkedIn reports Not Applicable or nothing, the job title decides and the Level
-column says so. Listings were collected on November 11, 2026.
+module the pages import. Level comes from LinkedIn's own seniority field; where LinkedIn reports Not Applicable or
+nothing, the job title decides and the Level column says so. Titles that show rank above
+entry level (manager, director, supervisor, lead, senior, foreman, journeyman) or a licensed
+practitioner role (physician, dentist, pharmacist, dietitian, physical therapist, BCBA) are
+listed as not entry level regardless of LinkedIn's field. Listings were collected on
+November 11, 2026.
