@@ -1232,8 +1232,7 @@ tbody tr[hidden] {
   display: none;
 }
 </style>
-<script data-arden-jobs-location="js">
-/* Location filter for the rendered jobs page.
+<script data-arden-jobs-location="js">/* Location filter for the rendered jobs page.
    The Astryx renderer strips script, so this is injected after render by
    scripts/inject-location-filter.py. Plain DOM: build a multi-select from the
    Location cells, hide rows whose towns are all unchecked, and report the
@@ -1428,12 +1427,15 @@ tbody tr[hidden] {
     var shown = 0;
 
     entries.forEach(function (entry) {
-      var visible =
-        (!filtering ||
+      // Favorites win over the town selection: a saved role is the reader's own
+      // shortlist, so checking Favorites must not hide one because its town
+      // happens to be unchecked.
+      var visible = favoritesOnly
+        ? (isFavorite ? isFavorite(entry.row) : false)
+        : !filtering ||
           entry.towns.some(function (town) {
             return selected[town];
-          })) &&
-        (!favoritesOnly || (isFavorite ? isFavorite(entry.row) : false));
+          });
       entry.row.hidden = !visible;
       entry.panels.forEach(function (panel) {
         panel.hidden = !visible;
