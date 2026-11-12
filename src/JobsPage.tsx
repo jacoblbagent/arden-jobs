@@ -16,7 +16,15 @@ const columns = [
     key: 'title' as const,
     header: 'Role',
     width: proportional(2.2, {minWidth: 240}),
-    renderCell: (job: Job) => <Link href={job.url}>{job.title}</Link>,
+    // target="_blank" rather than Astryx's isExternalLink: that flag appends
+    // "(opens in new tab)" screen-reader text, which the title cell's sort
+    // script would then include in the sorted string. rel is set by hand so
+    // no window.opener handle leaks to the posting.
+    renderCell: (job: Job) => (
+      <Link href={job.url} target="_blank" rel="noopener noreferrer">
+        {job.title}
+      </Link>
+    ),
   },
   {
     key: 'company' as const,

@@ -1,7 +1,8 @@
-/* The injected location filter: one label, one select, one live count. The row
-   follows the page's own control styling (14px/500 text, 28px tall, 10px
-   radius, translucent fill), and every colour comes from the theme's custom
-   properties so it follows light and dark mode without a second palette. */
+/* The injected location filter: a label, a multi-select button, a checkbox panel
+   and one live count. The button follows the page's own control styling
+   (14px/500 text, 28px tall, 10px radius, translucent fill), and every colour
+   comes from the theme's custom properties so it follows light and dark mode
+   without a second palette. */
 
 .loc-filter {
   display: flex;
@@ -28,10 +29,13 @@
   align-items: center;
 }
 
-.loc-filter-select {
+.loc-filter-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   height: 28px;
-  max-width: 240px;
-  padding: 0 30px 0 12px;
+  max-width: 280px;
+  padding: 0 12px;
   border: 0;
   border-radius: 10px;
   background: var(--color-border);
@@ -40,30 +44,133 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
+  touch-action: manipulation;
 }
 
-.loc-filter-select:hover {
+.loc-filter-button:hover {
   background: var(--color-overlay-hover, var(--color-border));
 }
 
-.loc-filter-select:focus-visible {
+.loc-filter-button:focus-visible {
   outline: 2px solid var(--color-text-primary);
   outline-offset: 2px;
 }
 
+.loc-filter-button[aria-expanded='true'] {
+  background: var(--color-overlay-pressed, var(--color-border));
+}
+
+.loc-filter-value {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .loc-filter-chevron {
-  position: absolute;
-  right: 11px;
   display: flex;
+  margin-left: auto;
   color: var(--color-text-secondary);
-  pointer-events: none;
 }
 
 .loc-filter-chevron svg {
   display: block;
   fill: currentColor;
+}
+
+.loc-filter-panel {
+  position: fixed;
+  z-index: 20;
+  width: 232px;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-background-popover);
+  box-shadow: var(--shadow-med);
+}
+
+.loc-filter-panel[hidden] {
+  display: none;
+}
+
+.loc-filter-options {
+  max-height: 288px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.loc-filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.loc-filter-option:hover {
+  background: var(--color-overlay-hover);
+}
+
+.loc-filter-check {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.loc-filter-check:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.loc-filter-town {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.loc-filter-num {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+}
+
+.loc-filter-footer {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 4px 8px 2px;
+  border-top: 1px solid var(--color-border);
+}
+
+.loc-filter-action {
+  padding: 2px 6px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.loc-filter-action:hover {
+  color: var(--color-text-primary);
+  background: var(--color-overlay-hover);
+}
+
+.loc-filter-action:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
 }
 
 /* Rows carry the hidden attribute; make sure the table's own display rules do
