@@ -1,0 +1,65 @@
+/* The title cell: role text, then an icon button that opens the posting.
+   Injected after render by scripts/inject-job-link.py, so everything is scoped
+   to the class names written in src/JobsPage.tsx.
+
+   The colour is written out rather than taken from var(--color-accent): this
+   theme is neutral, so accent resolves to near-black and the button would read
+   as grey. Blue here; for orange use light-dark(#E8710A, #FF9A3C) and
+   light-dark(#E8710A1F, #FF9A3C29). */
+
+/* The wrapper carries no box of its own: `display: contents` leaves the title
+   text and the button in the cell's normal inline flow, so the favorites star
+   (inserted first) and the collapse chevron (appended last) keep their places
+   and a title that wraps to two lines still ends with the button, never a row
+   of its own. A flex box on the cell itself breaks the table's column widths. */
+.job-title-cell {
+  --job-link-color: light-dark(#0064e0, #2694fe);
+  --job-link-tint: light-dark(#0064e01f, #2694fe29);
+  display: contents;
+}
+
+.job-title-text {
+  min-width: 0;
+}
+
+/* An anchor, not a button: it navigates, and a <button> inside a link is
+   invalid markup. Sized like the star button so the two read as one control
+   group beside the title. */
+.job-link-btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-radius: 6px;
+  color: var(--job-link-color);
+  background: var(--job-link-tint);
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.job-link-btn:hover {
+  color: #ffffff;
+  background: var(--job-link-color);
+}
+
+.job-link-btn:focus-visible {
+  outline: 2px solid var(--job-link-color);
+  outline-offset: 2px;
+}
+
+.job-link-btn svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
